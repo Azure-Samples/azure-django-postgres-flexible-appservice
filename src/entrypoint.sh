@@ -1,7 +1,6 @@
 #!/bin/bash
-
 set -e
-
+python3 -m pip install --upgrade pip
 echo "${0}: running migrations."
 python3 manage.py migrate
 python3 manage.py loaddata seed_data.json
