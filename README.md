@@ -6,7 +6,17 @@ This project deploys a web application for a space travel agency using Django. T
 
 This project has [Dev Container support](https://code.visualstudio.com/docs/devcontainers/containers), so it will be setup automatically if you open it in Github Codespaces or in local VS Code with the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
 
-If you're not using one of those options for opening the project, then you'll need to:
+If you're *not* using one of those options for opening the project, then you'll need to:
+
+1. Start up a local PostgreSQL server, create a database for the app, and set the following environment variables according to your database configuration.
+
+```shell
+export POSTGRES_HOST=localhost
+export POSTGRES_PORT=5432
+export POSTGRES_DATABASE=<YOUR DATABASE>
+export POSTGRES_USERNAME=<YOUR USERNAME>
+export POSTGRES_PASSWORD=<YOUR PASSWORD>
+```
 
 1. Create a [Python virtual environment](https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments) and activate it.
 
@@ -26,11 +36,10 @@ If you're not using one of those options for opening the project, then you'll ne
 
 ## Running locally
 
-Run gunicorn on the app:
+If you're running the app inside VS Code or GitHub Codespaces, you can use the "Run and Debug" button to start the app.
 
 ```sh
-python3 src/manage.py collectstatic
-python3 -m gunicorn project.wsgi:application --pythonpath src --reload
+python3 src/manage.py runserver 8000
 ```
 
 ### Admin
