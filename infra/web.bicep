@@ -47,6 +47,7 @@ module web 'core/host/appservice.bicep' = {
       POSTGRES_USERNAME: dbserverUser
       POSTGRES_DATABASE: dbserverDatabaseName
       POSTGRES_PASSWORD: '@Microsoft.KeyVault(VaultName=${keyVaultName};SecretName=DBSERVERPASSWORD)'
+      POSTGRES_SSL: 'require'
       SECRET_KEY: '@Microsoft.KeyVault(VaultName=${keyVaultName};SecretName=SECRETKEY)'
     }
   }
@@ -62,3 +63,5 @@ module webKeyVaultAccess './core/security/keyvault-access.bicep' = {
 }
 
 output SERVICE_WEB_IDENTITY_PRINCIPAL_ID string = web.outputs.identityPrincipalId
+
+output uri string = web.outputs.uri
