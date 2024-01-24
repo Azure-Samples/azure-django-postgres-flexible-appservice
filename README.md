@@ -1,3 +1,22 @@
+---
+page_type: sample
+languages:
+- azdeveloper
+- python
+- bicep
+- html
+- css
+- scss
+products:
+- azure
+- azure-app-service
+- azure-postgresql
+urlFragment: azure-django-postgres-flexible-appservice
+name: Deploy Django Application with PostgreSQL on Azure App Service (Python)
+description: This project deploys a web application for a space travel agency using Django with Python, and is set up for easy deployment with the Azure Developer CLI.
+---
+<!-- YAML front-matter schema: https://review.learn.microsoft.com/en-us/help/contribute/samples/process/onboarding?branch=main#supported-metadata-fields-for-readmemd -->
+
 # Deploy Django Application with PostgreSQL via Azure Container Apps
 
 This project deploys a web application for a space travel agency using Django. The application can be deployed to Azure with Azure App Service using the [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/overview).
@@ -62,7 +81,7 @@ python3 src/manage.py createsuperuser
 
     ```sh
     python3 -m pip install -r requirements-dev.txt
-    python3 -m playwright install --with-deps
+    python3 -m playwright install chromium --with-deps
     ```
 
 3. Run the tests:
