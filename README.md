@@ -5,12 +5,10 @@ languages:
 - python
 - bicep
 - html
-- css
-- scss
 products:
 - azure
 - azure-app-service
-- azure-postgresql
+- azure-database-postgresql
 urlFragment: azure-django-postgres-flexible-appservice
 name: Deploy Django Application with PostgreSQL on Azure App Service (Python)
 description: This project deploys a web application for a space travel agency using Django with Python, and is set up for easy deployment with the Azure Developer CLI.
